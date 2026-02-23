@@ -53,12 +53,22 @@ No LLM parsing on every call. No fragile scraper. Just a stable endpoint.
 
 - **Frontend:** Next.js 14, Tailwind CSS, Shadcn UI, Framer Motion
 - **Backend:** Next.js API Routes (BFF), Playwright, `@anthropic-ai/sdk`
-- **Storage:** localStorage (MVP)
+- **Storage:** MongoDB Atlas + `mongoose`
 
 ## Getting Started
 
 ```bash
 npm install
+```
+
+Copy `.env.local.example` to `.env.local` and fill in your credentials:
+
+```env
+MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/agenticview
+ANTHROPIC_API_KEY=sk-ant-...
+```
+
+```bash
 npm run dev
 ```
 
